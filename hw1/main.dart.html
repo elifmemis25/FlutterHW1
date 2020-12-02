@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #008000; font-weight: bold;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre>import <span class="s1">'package:flutter/cupertino.dart'</span>;
+import <span class="s1">'package:flutter/material.dart'</span>;
+
+ <span class="s2">void </span>main() {
+  runApp(StudentCard());
+  }
+ <span class="s2">class </span>StudentCard <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s2">return </span>MaterialApp(
+    debugShowCheckedModeBanner: <span class="s2">false</span>,
+      home: Scaffold(
+        backgroundColor: Colors.red[<span class="s3">100</span>],
+        body: SafeArea(
+          child:Padding(
+            padding: <span class="s2">const </span>EdgeInsets.symmetric(horizontal: <span class="s3">32.0</span>),
+
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: &lt;Widget&gt;[
+              CircleAvatar(
+                backgroundImage: AssetImage(<span class="s1">'assets/pp.jpg'</span>),
+                radius: <span class="s3">100</span>,
+              ),
+              SizedBox(height: <span class="s3">10.0</span>,),
+              Text(<span class="s1">'Elif Memis'</span>, style: TextStyle( fontFamily: <span class="s1">'Montserrat'</span>,fontSize: <span class="s3">32.0</span>, fontWeight: FontWeight.bold, color: Colors.pink[<span class="s3">900</span>], ),),
+
+              SizedBox(height: <span class="s3">10.0</span>,),
+
+              Text(<span class="s1">'Student at Bogazici University'</span>, textAlign: TextAlign.center, style: TextStyle( fontFamily: <span class="s1">'Rubik'</span>,fontSize: <span class="s3">18</span>, fontWeight: FontWeight.bold, color: Colors.pink[<span class="s3">200</span>], letterSpacing: <span class="s3">2.0</span>,),),
+
+              SizedBox(
+                height: <span class="s3">50.0</span>,
+              width: <span class="s3">200</span>,
+              child: Divider(
+                height: <span class="s3">2.0</span>,
+                  color: Colors.blue[<span class="s3">50</span>],
+              )
+              ),
+              Card(
+              child: ListTile(
+                leading: Icon(Icons.phone),
+                title: Text(<span class="s1">'+90 500 500 50 50'</span>),
+              ),
+              ),
+
+              SizedBox(height: <span class="s3">10</span>,),
+
+              Card(
+              child: ListTile(
+                leading: Icon(Icons.email),
+                title: Text(<span class="s1">'elifmemis@mail.com'</span>),
+              ),
+              ),
+
+            ],
+          ),)
+      )
+    ));
+  }
+  }
+
+</pre>
+</body>
+</html>
